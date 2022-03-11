@@ -1,0 +1,20 @@
+<div class="margem">
+  <mat-card>
+    <mat-card-subtitle>
+      Titulo
+    </mat-card-subtitle>
+    <table matSort (matSortChange)="regioes">
+      <tr>
+        <th mat-sort-header="id">ID</th>
+        <th mat-sort-header="regiao">Região</th>
+        <th mat-sort-header="total_exames">Total de Exames</th>
+      </tr>
+
+      <tr *ngFor="let module of regioes">
+        <td>{{module.id}}</td>
+        <td>{{module.regiao}}</td>
+        <td>{{module.total_exames}}</td>
+      </tr>
+    </table>
+  </mat-card>
+</div>
